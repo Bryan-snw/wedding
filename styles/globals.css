@@ -6,8 +6,9 @@ html,
 body {
    padding: 0;
    margin: 0;
-   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+   font-family: Josefin Sans;
 }
 
 a {
@@ -18,6 +19,26 @@ a {
 * {
    box-sizing: border-box;
 }
+
+.mapouter {
+   position: relative;
+   text-align: right;
+   padding-top: 56.25%; /* 16:9 aspect ratio */
+   height: 300px; /* Adjust height to make the map smaller */
+   overflow: hidden;
+   max-width: 100%; /* Ensure it scales to fit the parent */
+   margin: 0 auto; /* Center the map */
+ }
+ 
+ .gmap_canvas {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background: none !important;
+ }
+ 
 
 @media (prefers-color-scheme: dark) {
    html {

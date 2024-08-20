@@ -9,7 +9,18 @@ module.exports = {
       "./src/**/*.{js,ts,jsx,tsx,mdx}",
    ],
    theme: {
-      extend: {},
+      extend: {
+         fontFamily: {
+            roboto: ['Roboto', 'sans-serif'],
+            cookie: ['Cookie'],
+            allura: ['Allura'],
+            qwitcher: ['Qwitcher Grypen'],
+            anton: ['Anton'],
+            teko: ['Teko'],
+            josefin: ['Josefin Sans'],
+            lilita: ['Lilita One'],
+          },
+      },
    },
    plugins: [],
 };
