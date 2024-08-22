@@ -234,7 +234,7 @@ export default function InvitationPage(props) {
                </div>
 
                {/* Profile */}
-               <div className="container my-4">
+               <div className="container my-6 md:my-10">
                   {/* The Groom */}
                   <div className="container mx-auto">
                      <div className="flex flex-col lg:flex-row lg:space-x-4">
@@ -243,7 +243,12 @@ export default function InvitationPage(props) {
                         </div>
                         <div className="my-4 flex-1 lg:p-4">
                            <button data-aos='fade-up-left' className="cursor-default border border-solid border-black rounded-3xl py-2 px-4 lg:text-3xl">The Groom</button>
-                           <p data-aos='fade-up' className="mt-4 lg:mt-6 text-4xl font-semibold lg:text-6xl">Kevin Lois</p>
+                           <div className="my-4 lg:my-6">
+                              <p data-aos='fade-up' className=" text-4xl font-semibold lg:text-6xl">Kevin Lois</p>
+                              <p data-aos='fade-up' className="font-semibold italic md:text-2xl">
+                                 The Only Son of Mr. Gabriel Lois & Mrs. Lily Laiyerang
+                              </p>
+                           </div>
                            <p data-aos='zoom-in' className="md:text-3xl">
                               Kevin is a cheerful, friendly, and caring person. He brings positivity and warmth wherever he goes, 
                               making everyone around him feel welcome and valued. On this special day, 
@@ -264,8 +269,6 @@ export default function InvitationPage(props) {
                         alt="Flower Chain Divider"
                      />
                   </div>
-
-                  {/* <hr  className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" /> */}
                   
                   {/* The Bride */}
                   <div className="container mx-auto">
@@ -275,7 +278,12 @@ export default function InvitationPage(props) {
                         </div>
                         <div data-aos='zoom-in' className="my-4 flex-1 lg:p-4">
                            <button data-aos='fade-up-right' className="cursor-default border border-solid border-black rounded-3xl py-2 px-4 lg:text-3xl">The Bride</button>
-                           <p data-aos='fade-up' className="mt-4 lg:mt-6 text-4xl font-semibold lg:text-6xl">Gisela Jeanette Mayella Sie</p>
+                           <div className="my-4 lg:my-6">
+                              <p data-aos='fade-up' className="text-4xl font-semibold lg:text-6xl">Gisela Jeanette Mayella Sie</p>
+                              <p data-aos='fade-up' className="font-semibold italic md:text-2xl">
+                                 The Eldest Daugther of Mr. Ricky Sie & Mrs. Lance Fongiman
+                              </p>
+                           </div>
                            <p data-aos='zoom-in' className="md:text-3xl">
                               Gisela navigates life with a deep sense of purpose and empathy. 
                               Though introverted and shy, Gisela is driven by a desire to connect with others on a meaningful level. 
@@ -288,7 +296,7 @@ export default function InvitationPage(props) {
                </div>
 
                {/* Wedding Announcement Info */}
-               <div className="text-center p-6 md:p-8 relative">
+               <div className="text-center p-6 md:p-8 relative md:my-10">
                   {/* Top-left decoration */}
                   <img
                      data-aos='fade-right'
@@ -333,7 +341,7 @@ export default function InvitationPage(props) {
                   </div>
                   <div className="my-4 md:my-6 flex flex-col items-center justify-center text-center">
                      <h1 data-aos="flip-left" data-aos-delay="1500" className="mb-4 uppercase font-semibold mb-2 md:text-4xl">Are Getting Married</h1>
-                     <img data-aos="zoom-out" data-aos-delay="1600" src="/date-black.png" className="w-[150px] md:w-[250px]" alt="Sunday, 13 October 2024"/>
+                     <img data-aos="zoom-out" data-aos-delay="1600" src="/date-black.png" className="w-[150px] md:w-[350px]" alt="Sunday, 13 October 2024"/>
                   </div>
                   <div data-aos="fade-up" data-aos-delay="500"> 
                      <h1 className="font-semibold text-2xl md:text-5xl">Holy Matrimony</h1>
@@ -359,7 +367,7 @@ export default function InvitationPage(props) {
                </div>
 
                {/* PostCard */}
-               <div className="container mx-auto">
+               <div className="container mx-auto my-6 md:my-10">
 
                </div>
 
@@ -397,8 +405,8 @@ export default function InvitationPage(props) {
                </div>
 
                {/* Photo Gallery */}
-               <div className="">
-                  <h1 data-aos="fade-up" data-aos-duration="1500" className="text-center text-3xl">Our Best Moment</h1>
+               <div className="md:my-10">
+                  <h1 data-aos="fade-up" data-aos-duration="1500" className="mb-4 text-center text-3xl md:text-6xl">Our Best Moment</h1>
                   <div data-aos="fade-up" data-aos-duration="1500" className="grid-wrapper">
                      <div className="tall">
                         <img src="/Gallery/1.jpeg"/>
@@ -415,9 +423,6 @@ export default function InvitationPage(props) {
                      <div className="tall">
                         <img src="/Gallery/2.jpeg"/>
                      </div>
-                     <div className="big">
-                        <img src="/Gallery/4.jpeg"/>
-                     </div>
                      <div className="tall">
                         <img src="/Gallery/9.jpeg"/>
                      </div>
@@ -429,6 +434,9 @@ export default function InvitationPage(props) {
                      </div>
                      <div className="tall">
                         <img src="/Gallery/11.jpeg"/>
+                     </div>
+                     <div className="big">
+                        <img src="/Gallery/4.jpeg"/>
                      </div>
                      {/* <div className="big">
                         <img src="/Gallery/13.jpeg"/>
