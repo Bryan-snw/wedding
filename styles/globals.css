@@ -86,6 +86,7 @@ a {
    }
    body {
       color: black;
-      background: #fdf0d1;
+      /* background: #fdf0d1; */
+      background: white;
    }
 }
