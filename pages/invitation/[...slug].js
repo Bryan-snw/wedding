@@ -18,13 +18,17 @@ export default function InvitationPage(props) {
 
    let nama = data && data[0];
    let meja = data && data[1];
+   let pax  = data && (data[2] ?? (parseInt(data[2]) || 1));
+   pax = Math.min(pax, 2);
 
    function BukaUndangan() {
-      setShow(true);
-      const music = new Audio("/Music/Started With You.mp3");
-      setSong(music);
-      music.play();
-      music.loop = true;
+      if (!show) {
+         setShow(true);         
+         const music = new Audio("/Music/Started With You.mp3");
+         setSong(music);
+         music.play();
+         music.loop = true;
+      }
       
       setTimeout(() => {
          const mainDiv = document.getElementById('main');
@@ -35,8 +39,6 @@ export default function InvitationPage(props) {
    }
 
    function stopMusic() {
-      // song.muted = true;
-      console.log(pause);
       if (!pause) {
          song.muted = true;
          setPause(true);
@@ -44,10 +46,6 @@ export default function InvitationPage(props) {
          song.muted = false;
          setPause(false);
       }
-   }
-
-   function bukaHadiah(){
-      setShowGift(true);
    }
 
    function copyToClipboard(text ,id){
@@ -134,6 +132,10 @@ export default function InvitationPage(props) {
                   onClick={() => BukaUndangan()}>
                   💞 Buka Undangan 💞
                </button>
+               {/* Invited Count Section */}
+               <div className="text-center bg-white bg-opacity-75 rounded-xl relative z-10 mt-2">
+               <p className="md:text-3xl">Jumlah Undangan: {pax}</p>
+               </div>
             </div>
          </div>
          {show && (
@@ -154,8 +156,8 @@ export default function InvitationPage(props) {
                      />
                   </div>
                   <h1 data-aos='fade-down' data-aos-delay="600" className="mb-4 md:mb-10 text-lg md:text-5xl italic font-semibold">
-                     &quot;So they are no longer two, but one flesh. Therfore what God has joined together, 
-                     let no one seperate.&quot;
+                     &quot;So they are no longer two, but one flesh. Therefore what God has joined together, 
+                     let no one separate.&quot;
                   </h1>
                   <p data-aos='fade-down' data-aos-delay="700" className="text-lg md:text-4xl italic font-bold">Matthew 19:6</p>
                </div>
