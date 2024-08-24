@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { Fragment, useEffect, useState } from "react";
-import { Gallery } from "react-grid-gallery";
+import Image from 'next/image';
 import Countdown from 'react-countdown';
 
 export default function InvitationPage(props) {
@@ -142,17 +142,20 @@ export default function InvitationPage(props) {
                {/* Intro */}
                <div className="bg-white px-4 text-center py-6 md:py-10 md:px-20">
                   <div className="flex justify-center mb-4 md:mb-10">
-                     <img
+                     <Image
+                        src="/hias.png"
+                        alt="hiasan"
+                        layout="responsive"
+                        width={180}
+                        height={180}  
                         className="w-full max-w-[180px] md:max-w-[400px] object-contain"
                         data-aos="zoom-in"
                         data-aos-delay="500"
-                        src="/hias.png"
-                        alt="hiasan"
                      />
                   </div>
                   <h1 data-aos='fade-down' data-aos-delay="600" className="mb-4 md:mb-10 text-lg md:text-5xl italic font-semibold">
-                     "So they are no longer two, but one flesh. Therfore what God has joined together, 
-                     let no one seperate."
+                     &quot;So they are no longer two, but one flesh. Therfore what God has joined together, 
+                     let no one seperate.&quot;
                   </h1>
                   <p data-aos='fade-down' data-aos-delay="700" className="text-lg md:text-4xl italic font-bold">Matthew 19:6</p>
                </div>
@@ -162,8 +165,15 @@ export default function InvitationPage(props) {
                   {/* The Groom */}
                   <div className="container mx-auto">
                      <div className="flex flex-col lg:flex-row lg:space-x-4">
-                        <div data-aos='fade-right' data-aos-delay="800" className="my-4 flex-1 border border-black rounded-se-[120px] rounded-bl-[120px] overflow-hidden">
-                           <img src={'/Profile/kevin1.jpeg'} className="object-cover" alt="The Groom" />
+                        <div data-aos='fade-right' data-aos-delay="800" className="my-4 flex-1 rounded-se-[120px] rounded-bl-[120px] overflow-hidden">
+                           <Image
+                              src='/Profile/kevin1.jpeg'
+                              alt="The Groom"
+                              layout="responsive"
+                              width={1200}
+                              height={800}
+                              className="object-cover"
+                           />
                         </div>
                         <div className="my-4 flex-1 lg:p-4">
                            <button data-aos='fade-up-left' className="cursor-default border border-solid border-black rounded-3xl py-2 px-4 lg:text-3xl md:px-5 md:py-3 hover:text-white hover:bg-slate-950">The Groom</button>
@@ -197,8 +207,15 @@ export default function InvitationPage(props) {
                   {/* The Bride */}
                   <div className="container mx-auto">
                      <div className="flex flex-col lg:flex-row-reverse lg:space-x-4">
-                        <div data-aos='fade-left' data-aos-delay="800" className="my-4 flex-1 border border-black rounded-ss-[120px] rounded-br-[120px] overflow-hidden">
-                           <img src={'/Profile/gisella1.jpeg'} className="object-cover" alt="The Bride" />
+                     <div data-aos='fade-left' data-aos-delay="800" className="my-4 flex-1 rounded-se-[120px] rounded-bl-[120px] overflow-hidden">
+                           <Image
+                              src='/Profile/gisella1.jpeg'
+                              alt="The Bride"
+                              layout="responsive"
+                              width={1200}
+                              height={800}
+                              className="object-cover"
+                           />
                         </div>
                         <div data-aos='zoom-in' className="my-4 flex-1 lg:p-4">
                            <button data-aos='fade-up-right' className="cursor-default border border-solid border-black rounded-3xl py-2 px-4 lg:text-3xl md:px-5 md:py-3 hover:text-white hover:bg-slate-950">The Bride</button>
@@ -223,36 +240,48 @@ export default function InvitationPage(props) {
                <div className="bg-gradient-to-b from-white via-[#fdf0d1] to-white">
                   <div className="mx-4 my-6 py-6 lg:py-20 text-center relative">
                      {/* Top-left decoration */}
-                     <img
+                     <Image
                         data-aos='fade-right'
                         src="/top-left.png"
                         alt="Top Left Decoration"
+                        layout="intrinsic"
+                        width={300}
+                        height={300}
                         className="absolute top-0 left-0 w-[80px] md:w-[200px] lg:w-[300px] z-10"
                      />
-                     
+
                      {/* Top-right decoration */}
-                     <img
+                     <Image
                         data-aos='fade-left'
                         src="/top-right.png"
                         alt="Top Right Decoration"
-                        className="absolute top-0 right-0  w-[80px] md:w-[200px] lg:w-[300px] z-10"
+                        layout="intrinsic"
+                        width={300}
+                        height={300}
+                        className="absolute top-0 right-0 w-[80px] md:w-[200px] lg:w-[300px] z-10"
                      />
 
                      {/* Bottom-left decoration */}
-                     <img
+                     <Image
                         data-aos='fade-right'
                         data-aos-delay="600"
                         src="/bottom-left.png"
                         alt="Bottom Left Decoration"
+                        layout="intrinsic" // or "responsive"
+                        width={300}
+                        height={300}
                         className="absolute bottom-0 left-0 w-[80px] md:w-[200px] lg:w-[300px] z-10"
                      />
 
                      {/* Bottom-right decoration */}
-                     <img
+                     <Image
                         data-aos='fade-left'
                         data-aos-delay="600"
                         src="/bottom-right.png"
                         alt="Bottom Right Decoration"
+                        layout="intrinsic" // or "responsive"
+                        width={300}
+                        height={300}
                         className="absolute bottom-0 right-0 w-[80px] md:w-[200px] lg:w-[300px] z-10"
                      />
 
@@ -268,7 +297,14 @@ export default function InvitationPage(props) {
                         <h1 data-aos="flip-left" data-aos-delay="1500" className="uppercase font-semibold text-2xl md:text-4xl">Are Getting Married</h1>
                      </div>
                      <div className="my-4 flex flex-col items-center lg:flex-row lg:items-start lg:justify-center lg:gap-8">
-                        <img data-aos="zoom-out" data-aos-delay="1600" src="/date-black.png" className="w-[150px] md:w-[350px] lg:order-2" alt="Sunday, 13 October 2024"/>
+                        <Image data-aos="zoom-out" data-aos-delay="1600"
+                           src="/date-black.png"
+                           alt="Sunday, 13 October 2024"
+                           layout="intrinsic"
+                           width={350}
+                           height={350}
+                           className="w-[150px] md:w-[350px] lg:order-2"
+                        />
                         <div className="my-4 lg:pt-16 flex flex-col items-center lg:items-start lg:order-1">
                            <div data-aos="fade-up" data-aos-delay="1700" className="text-center lg:text-left">
                                  <h1 className="font-semibold text-2xl md:text-5xl">Holy Matrimony</h1>
