@@ -4,13 +4,12 @@ import { Fragment, useEffect, useState } from "react";
 import Image from 'next/image';
 import Countdown from 'react-countdown';
 
-export default function InvitationPage(props) {
+export default function InvitePage(props) {
    const router = useRouter();
    const data = router.query.slug;
 
    const targetDate = new Date(2024, 10, 13, 12, 15, 0);
    const [pause, setPause] = useState(false);
-   const [music, setMusic] = useState("Mute");
    const [song, setSong] = useState();
    const [show, setShow] = useState(false);
    const [showGift, setShowGift] = useState(false);
@@ -43,11 +42,9 @@ export default function InvitationPage(props) {
       if (!pause) {
          song.muted = true;
          setPause(true);
-         setMusic("Play");
       } else {
          song.muted = false;
          setPause(false);
-         setMusic("Mute");
       }
    }
 
@@ -115,7 +112,7 @@ export default function InvitationPage(props) {
          </Head>
          {show && (
             <button className="fixed bottom-3 start-3" onClick={() => stopMusic()}>
-               {music}
+               Stop
             </button>
          )}
          <div
@@ -335,8 +332,8 @@ export default function InvitationPage(props) {
                   <div data-aos="fade-up" data-aos-duration="1500" className="text-center">
                      <h1 className="text-3xl md:text-6xl">Wedding Gift</h1>
                      <p className="my-4 md:my-8 text md:text-4xl">
-                        Your presence at our wedding is the best gift we could receive. 
-                        Should you wish to contribute in another way, your thoughtfulness would be appreciated.
+                        For family and friend who would like to send a gift.
+                        We would be glad to recieve it. Tap the button to send them to us.
                      </p>
                      <button onClick={() => setShowGift((prevShowGift) => !prevShowGift)} className="md:text-2xl md:px-8 md:py-4 border border-black py-2 px-4 rounded-3xl hover:text-white hover:bg-slate-950">
                         <i className="fa-solid fa-gift"></i> Wedding Gift
