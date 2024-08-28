@@ -10,6 +10,7 @@ export default function InvitePage(props) {
 
    const targetDate = new Date(2024, 10, 13, 12, 15, 0);
    const [pause, setPause] = useState(false);
+   const [music, setMusic] = useState("Mute");
    const [song, setSong] = useState();
    const [show, setShow] = useState(false);
    const [showGift, setShowGift] = useState(false);
@@ -42,9 +43,11 @@ export default function InvitePage(props) {
       if (!pause) {
          song.muted = true;
          setPause(true);
+         setMusic("Play");
       } else {
          song.muted = false;
          setPause(false);
+         setMusic("Mute");
       }
    }
 
@@ -112,7 +115,7 @@ export default function InvitePage(props) {
          </Head>
          {show && (
             <button className="fixed bottom-3 start-3" onClick={() => stopMusic()}>
-               Stop
+               {music}
             </button>
          )}
          <div
@@ -328,39 +331,6 @@ export default function InvitePage(props) {
                </div>
 
                <div className="py-6 px-4 md:py-20 md:px-40 bg-gradient-to-b from-white via-[#fdf0d1] to-white">
-                  {/* Wedding Gift */}
-                  <div data-aos="fade-up" data-aos-duration="1500" className="text-center">
-                     <h1 className="text-3xl md:text-6xl">Wedding Gift</h1>
-                     <p className="my-4 md:my-8 text md:text-4xl">
-                        For family and friend who would like to send a gift.
-                        We would be glad to recieve it. Tap the button to send them to us.
-                     </p>
-                     <button onClick={() => setShowGift((prevShowGift) => !prevShowGift)} className="md:text-2xl md:px-8 md:py-4 border border-black py-2 px-4 rounded-3xl hover:text-white hover:bg-slate-950">
-                        <i className="fa-solid fa-gift"></i> Wedding Gift
-                     </button>
-                     {showGift && (
-                        <div className="flex flex-col lg:flex-row md:my-6">
-                           <div data-aos="fade-down" data-aos-duration="1500" className="mt-4 md:m-4 md:p-10 container p-4 bg-opacity-50 bg-white rounded-2xl">
-                              <div className="text-start">
-                                 <h2 className="mb-1 text-2xl font-semibold md:text-4xl">Bank BCA</h2>
-                                 <p className="italic font-medium md:text-2xl md:mt-2">1580057523</p>
-                                 <p className="italic font-medium md:text-2xl">Jeanette Mayella Sie</p>
-                              </div>
-                              <button id="copy1" className="mt-1 font-medium md:text-xl md:mt-4" onClick={() => copyToClipboard('1580057523', 'copy1')}>{copy1}</button>
-                           </div>
-
-                           <div data-aos="fade-down" data-aos-duration="1500" className="mt-4 md:m-4 md:p-10  container p-4 bg-opacity-50 bg-white rounded-2xl">
-                              <div className="text-start">
-                                 <h2 className="mb-1 text-2xl font-semibold md:text-4xl">Bank BCA</h2>
-                                 <p className="italic font-medium md:text-2xl md:mt-2">7890665424</p>
-                                 <p className="italic font-medium md:text-2xl">Kevin Lois</p>
-                              </div>
-                              <button id="copy2" className="mt-1 font- md:text-xl md:mt-4" onClick={() => copyToClipboard('7890665424', 'copy2')}>{copy2}</button>
-                           </div>
-                        </div>
-                     )}
-                  </div>
-
                   {/* Photo Gallery */}
                   <div className="mt-6 md:my-12">
                      <h1 data-aos="fade-up" data-aos-duration="1500" className="mb-4 md:mb-10 text-center text-3xl md:text-6xl">Our Best Moment</h1>
