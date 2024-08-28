@@ -431,6 +431,11 @@ export default function InvitePage(props) {
                   </div>
                </div>
 
+               <footer className="mt-6 py-6 lg:py-12">
+                  <div className="container mx-auto text-center">
+                     <p className="lg:text-xl">© Kevin & Gisela 2024</p>
+                  </div>
+               </footer>
             </div>
          )}
       </Fragment>

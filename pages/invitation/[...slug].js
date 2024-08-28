@@ -294,7 +294,7 @@ export default function InvitationPage(props) {
                         Save <div data-aos="zoom-out" data-aos-delay="500" className="inline font-cookie text-5xl md:text-8xl">The</div> Date
                      </h1>
                      <div className="md:my-6">
-                        <div data-aos='fade-up' data-aos-delay="1000" className="font-cookie font-medium text-4xl md:text-6xl">Gisela Jeanette Mayella Sie</div>
+                        <h1 data-aos='fade-up' data-aos-delay="1000" className="font-cookie font-medium text-4xl md:text-6xl">Gisela Jeanette Mayella Sie</h1>
                         <div data-aos='zoom-out' data-aos-delay="1200" className="font-cookie font-medium text-4xl md:text-6xl">&</div>
                         <h1 data-aos='fade-up' data-aos-delay="1400" className="font-cookie font-medium text-4xl md:text-6xl">Kevin Lois</h1>
                      </div>
@@ -464,6 +464,11 @@ export default function InvitationPage(props) {
                   </div>
                </div>
 
+               <footer className="mt-6 py-6 lg:py-12">
+                  <div className="container mx-auto text-center">
+                     <p className="lg:text-xl">© Kevin & Gisela 2024</p>
+                  </div>
+               </footer>
             </div>
          )}
       </Fragment>

@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Kevin & Gisela</title>
+        <link rel="icon" href="/logo.png" />
       </Head>
       <Component {...pageProps} />
     </>
