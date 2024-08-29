@@ -8,7 +8,7 @@ export default function InvitationPage(props) {
    const router = useRouter();
    const data = router.query.slug;
 
-   const targetDate = new Date(2024, 10, 13, 12, 15, 0);
+   const targetDate = '2024-10-13T10:00:00';
    const [pause, setPause] = useState(false);
    const [music, setMusic] = useState("Mute");
    const [song, setSong] = useState();

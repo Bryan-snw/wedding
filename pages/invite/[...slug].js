@@ -8,7 +8,7 @@ export default function InvitePage(props) {
    const router = useRouter();
    const data = router.query.slug;
 
-   const targetDate = new Date(2024, 10, 13, 12, 15, 0);
+   const targetDate = '2024-10-13T10:00:00';
    const [pause, setPause] = useState(false);
    const [music, setMusic] = useState("Mute");
    const [song, setSong] = useState();
@@ -377,7 +377,7 @@ export default function InvitePage(props) {
                   {/* Countdown */}
                   <div data-aos="fade-up" data-aos-duration="1000" id="countdown" className="mt-6 md:mt-20 flex flex-col items-center justify-center text-center">
                      <Countdown
-                        date={targetDate}  // 10 seconds from now
+                        date={targetDate}
                         renderer={renderer}
                      />
                      {/* <h1 className="mt-4 md:mt-20 text-3xl md:text-6xl">Until We Meet</h1> */}
