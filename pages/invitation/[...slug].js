@@ -110,7 +110,7 @@ export default function InvitationPage(props) {
    return (
       <Fragment>
          <Head>
-            <title>Inviation {nama}</title>
+            <title>Invitation {nama}</title>
             <meta name="description" />
          </Head>
          {show && (
