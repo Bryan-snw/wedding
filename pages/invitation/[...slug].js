@@ -20,7 +20,7 @@ export default function InvitationPage(props) {
    let nama = data && data[0];
    let meja = data && data[1];
    let pax  = data && (data[2] ?? (parseInt(data[2]) || 1));
-   pax = Math.min(pax, 2);
+   pax = Math.min(pax, 4);
 
    function BukaUndangan() {
       if (!show) {
